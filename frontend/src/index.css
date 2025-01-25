@@ -2,8 +2,31 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme {
+:root {
   --color-custom-black: #1a1a1d;
+  --font-jet: "JetBrains Mono", monospace;
+}
+
+@theme {
+  --animate-typewriter: typing 2s steps(50), blink 0.7s;
+}
+@keyframes typing {
+  0% {
+    width: 0%;
+    visibility: visible;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: white;
+  }
 }
 
 html,
